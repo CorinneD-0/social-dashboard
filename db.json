@@ -2,6 +2,32 @@
   "users": [
     {
       "id": 1,
+      "username": "admin",
+      "name": "Admin",
+      "email": "admin@email.com",
+      "password": "password123",
+      "role": "admin",
+      "avatar": "https://picsum.photos/200/200?random=1",
+      "followers": 1000,
+      "following": 100,
+      "posts": 10,
+      "bio": "Sono l'admin"
+    },
+    {
+      "id": 2,
+      "username": "user",
+      "name": "User",
+      "email": "user@email.com",
+      "password": "password123",
+      "role": "user",
+      "avatar": "https://picsum.photos/200/200?random=2",
+      "followers": 500,
+      "following": 50,
+      "posts": 5,
+      "bio": "Sono un utente"
+    },
+    {
+      "id": 3,
       "username": "corinnedaquino",
       "name": "Corinne D'Aquino",
       "bio": "🌸 Digital creator | 📸 Instagram addicted | 🚀 Always learning",

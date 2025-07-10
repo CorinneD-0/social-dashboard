@@ -88,10 +88,10 @@ const AdminPanel = () => {
         <div className="card-genz p-6">
           <div className="flex items-center justify-between mb-6">
             <div>
-              <h1 className="text-3xl font-bold text-gradient-primary mb-2">
+              <h1 className="text-3xl font-bold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent mb-2">
                 👑 Pannello Amministrazione
               </h1>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-purple-600 dark:text-pink-400">
                 Gestisci utenti, contenuti e configurazioni del sistema
               </p>
             </div>
@@ -149,8 +149,8 @@ const AdminPanel = () => {
               <div className="flex items-center space-x-3">
                 <span className="text-3xl">👥</span>
                 <div>
-                  <p className="text-white/80 text-sm">Utenti Totali</p>
-                  <p className="text-2xl font-bold text-white">
+                  <p className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent text-sm font-semibold">Utenti Totali</p>
+                  <p className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
                     {users.length}
                   </p>
                 </div>
@@ -160,8 +160,8 @@ const AdminPanel = () => {
               <div className="flex items-center space-x-3">
                 <span className="text-3xl">📝</span>
                 <div>
-                  <p className="text-white/80 text-sm">Post Planner</p>
-                  <p className="text-2xl font-bold text-white">
+                  <p className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent text-sm font-semibold">Post Planner</p>
+                  <p className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
                     {posts.length}
                   </p>
                 </div>
@@ -171,8 +171,8 @@ const AdminPanel = () => {
               <div className="flex items-center space-x-3">
                 <span className="text-3xl">❤️</span>
                 <div>
-                  <p className="text-white/80 text-sm">Like Totali</p>
-                  <p className="text-2xl font-bold text-white">
+                  <p className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent text-sm font-semibold">Like Totali</p>
+                  <p className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
                     {posts.reduce((sum, post) => sum + post.likes, 0)}
                   </p>
                 </div>

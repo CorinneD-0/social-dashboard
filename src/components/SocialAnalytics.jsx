@@ -164,10 +164,10 @@ const SocialAnalytics = () => {
       <div className="card-genz p-6">
         <div className="flex items-center justify-between mb-6">
           <div>
-            <h3 className="text-2xl font-bold text-gradient-primary mb-2">
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent mb-2">
               📊 Analytics Social
             </h3>
-            <p className="text-gray-600 dark:text-gray-300">
+            <p className="text-purple-600 dark:text-pink-400">
               Analisi dei tuoi profili social collegati
             </p>
           </div>
@@ -191,8 +191,8 @@ const SocialAnalytics = () => {
             <div className="flex items-center space-x-3">
               <span className="text-3xl">👥</span>
               <div>
-                <p className="text-white/80 text-sm">Followers Totali</p>
-                <p className="text-2xl font-bold text-white">
+                <p className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent text-sm font-semibold">Followers Totali</p>
+                <p className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
                   {totalFollowers.toLocaleString()}
                 </p>
               </div>
@@ -202,8 +202,8 @@ const SocialAnalytics = () => {
             <div className="flex items-center space-x-3">
               <span className="text-3xl">📈</span>
               <div>
-                <p className="text-white/80 text-sm">Engagement Medio</p>
-                <p className="text-2xl font-bold text-white">
+                <p className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent text-sm font-semibold">Engagement Medio</p>
+                <p className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
                   {totalEngagement.toFixed(1)}%
                 </p>
               </div>
@@ -213,8 +213,8 @@ const SocialAnalytics = () => {
             <div className="flex items-center space-x-3">
               <span className="text-3xl">📱</span>
               <div>
-                <p className="text-white/80 text-sm">Piattaforme</p>
-                <p className="text-2xl font-bold text-white">
+                <p className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent text-sm font-semibold">Piattaforme</p>
+                <p className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
                   {analytics.length}
                 </p>
               </div>
@@ -254,8 +254,8 @@ const SocialAnalytics = () => {
                 {getPlatformIcon(item.platform)}
               </div>
               <div>
-                <h4 className="text-lg font-bold capitalize">{item.platform}</h4>
-                <p className="text-gray-600 dark:text-gray-300">@{item.username}</p>
+                <h4 className="text-lg font-bold capitalize bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">{item.platform}</h4>
+                <p className="text-purple-600 dark:text-pink-400 font-semibold">@{item.username}</p>
               </div>
             </div>
 

@@ -14,8 +14,7 @@ const Login = () => {
 
   const validate = () => {
     const newErrors = {};
-    if (!form.email) newErrors.email = 'Email obbligatoria';
-    else if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(form.email)) newErrors.email = 'Email non valida';
+    if (!form.email) newErrors.email = 'Campo obbligatorio';
     if (!form.password) newErrors.password = 'Password obbligatoria';
     else if (form.password.length < 6) newErrors.password = 'Minimo 6 caratteri';
     setErrors(newErrors);
@@ -30,7 +29,7 @@ const Login = () => {
     setIsLoading(true);
     
     try {
-        const result = await dispatch(loginUser(form)).unwrap();
+        const result = await dispatch(loginUser({ username: form.email, password: form.password })).unwrap();
         toast.success(`Welcome back, ${result.user?.name || result.name || form.email}! 🎉`);
       navigate('/dashboard');
     } catch (error) {
@@ -82,14 +81,14 @@ const Login = () => {
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.5 }}
             >
-              <label className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2 text-left">Username 👤</label>
+              <label className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2 text-left">Username o Email 👤</label>
               <input
                 type="text"
                 name="email"
                 value={form.email}
                 onChange={handleChange}
                 className="input-genz w-full px-4 py-3 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus-genz text-base shadow-md"
-                placeholder="Enter your username"
+                placeholder="Inserisci username o email"
                 required
               />
               {errors.email && <span className="text-red-500 text-xs">{errors.email}</span>}
@@ -129,7 +128,7 @@ const Login = () => {
                   Logging in...
                 </div>
               ) : (
-                <span className="flex items-center justify-center">
+                <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-white font-bold py-2 px-4 rounded-xl shadow-md hover:opacity-90 transition">
                   Let's Go! 🚀
                 </span>
               )}
